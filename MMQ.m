@@ -1,8 +1,8 @@
-%Método dos mínimos quadrados
-dados = load('arquivoEntrada.txt');
+%MÃ©todo dos mÃ­nimos quadrados
+dados = load('Dados.txt');
 %Vetor de entradas
 x = dados(:,1);
-%Vetor de saídas
+%Vetor de saÃ­das
 y = dados(:,2);
 n=size(x,1);
 %Quantidade de amostras
@@ -18,44 +18,44 @@ soma_xy=0;
 soma_x2y=0;
 soma_x3y=0;
 
-%Somotário das entradas
+%SomotÃ¡rio das entradas
 for i=1:n
     soma_x = soma_x + x(i);
 end
-%Somatório do quadrado das entradas
+%SomatÃ³rio do quadrado das entradas
 for i=1:n
     soma_x2 = soma_x2 + (x(i)^2);
 end
-%Somatório dos cubos
+%SomatÃ³rio dos cubos
 for i=1:n
     soma_x3=soma_x3+(x(i)^3);
 end
-%Somatório da quarta
+%SomatÃ³rio da quarta
 for i=1:n
     soma_x4=soma_x4+(x(i)^4);
 end
-%Somatório da quinta
+%SomatÃ³rio da quinta
 for i=1:n
     soma_x5=soma_x5+(x(i)^5);
 end
-%Somatório da sexta
+%SomatÃ³rio da sexta
 for i=1:n
     soma_x6=soma_x6+(x(i)^6);
 end
 
-%Somotário das saídas
+%SomotÃ¡rio das saÃ­das
 for i=1:n
     soma_y = soma_y + y(i);
 end
-%Somatório do produto entre entradas e saídas
+%SomatÃ³rio do produto entre entradas e saÃ­das
 for i=1:n
     soma_xy = soma_xy + y(i)*x(i);
 end
-%Somatório do produto entre entradas ao quadrado e saídas
+%SomatÃ³rio do produto entre entradas ao quadrado e saÃ­das
 for i=1:n
     soma_x2y = soma_x2y + y(i)*(x(i)^2);
 end
-%Somatório do produto entre entradas ao cubo e saídas
+%SomatÃ³rio do produto entre entradas ao cubo e saÃ­das
 for i=1:n
     soma_x3y = soma_x3y + y(i)*(x(i)^3);
 end
